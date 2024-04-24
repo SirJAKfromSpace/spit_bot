@@ -1,3 +1,9 @@
+# for spitbot
+.vscode
+songs.json
+artists.json
+playlists.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

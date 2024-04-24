@@ -4,12 +4,14 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# print('SPIT Initializing')
-# print(f'{client_id} {client_secret}')
+
+# returns sp
 def spotipy_auth():
     print('Connect using Spotipy Web API')
     client_id = os.getenv('cid')
     client_secret = os.getenv('csecret')
+    # print('SPIT Initializing')
+    # print(f'{client_id} {client_secret}')
     redirect_uri = 'https://jakfromspace.me/404'
     scope = 'user-top-read user-library-read user-follow-read'
     print('Note: the script will prompt you to log into your spotify account')
@@ -85,3 +87,10 @@ def get_all_playlists(sp):
         print(f'Playlists parsed {len(playlists)}', end='\r')
     print(f'Playlists parsed {len(playlists)}')
     return playlists
+
+def get_playlist_tracks(sp, playlist):
+    playlist_id = playlist['id']
+    # Get the tracks in the playlist
+    track_results = sp.playlist_items(playlist_id)
+    tracks = track_results['items']
+    return tracks

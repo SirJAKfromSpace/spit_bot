@@ -54,16 +54,10 @@ To start using SPIT, follow these steps:
 1. Set up your Spotify API credentials in a `.env` file (client ID, client secret, and redirect URI).
 2. Run the script:
    ```bash
-   python main_runner.py
+   python main_spit.py
    ```
 3. Follow the on-screen prompts to fetch and manage your Spotify data.
-
-### Example Commands
-
-- Fetch and save all liked songs:
-  ```bash
-  1  # Select option 1 from the menu
-  ```
+4. When prompted for spotify login on w browser, remember to copy and paste the redirected 404 url from the browser back into the CLI
 
 ___
 

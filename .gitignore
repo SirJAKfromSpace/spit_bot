@@ -3,6 +3,8 @@
 songs.json
 artists.json
 playlists.json
+.cache-*
+SPIT_*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
